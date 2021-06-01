@@ -1,0 +1,20 @@
+{
+  "name": "axe-report-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js ./e2e/features --require './e2e/stepDefinitions' --require './e2e/lib/hooks.js' -f json:results/cucumber-report.json --publish-quiet",
+    "report": "node ./e2e/lib/report.js",
+    "regression": "npm run report"
+  },
+  "author": "Raghu",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.1.0",
+    "chai": "^4.3.4",
+    "cucumber-html-reporter": "^5.4.0",
+    "puppeteer": "^8.0.0"
+  }
+}
